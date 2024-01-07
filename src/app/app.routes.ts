@@ -7,11 +7,15 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'lession-select',
+    redirectTo: 'lession-select-array',
     pathMatch: 'full',
   },
   {
     path: 'lession-select',
     loadComponent: () => import('./lession-select/lession-select.page').then( m => m.LessionSelectPage)
+  },
+  {
+    path: 'lession-select-array',
+    loadComponent: () => import('./lession-select-array/lession-select-array.page').then( m => m.LessionSelectArrayPage)
   },
 ];

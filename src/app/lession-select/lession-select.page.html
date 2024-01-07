@@ -1,0 +1,15 @@
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="formLession" (ngSubmit)="submitHandler()">
+    <div *ngFor="let formValues of formData let i = index">
+      
+      <ion-item lines="none" >
+        <ion-select formControlName="select{{i}}"   label="{{formValues.placeholder}}" label-placement="floating" fill="outline"  multiple="{{formValues.multiple}}">
+          <ion-select-option *ngFor="let selectValues of formValues.values" [value]="selectValues.value">{{selectValues.value}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      
+    </div>
+    <ion-button type="submit">submit</ion-button>
+  </form>
+</ion-content>
